@@ -17,16 +17,19 @@ public class HotelReservationSystem {
 		//setting values for lakewood
 	    Lotus = new Hotel("Lotus");
 	    Lotus.setRegularWeekDay(100);
+	    Lotus.setRegularWeekEnd(90);
 	    
 		 		
 		//setting values for bridgewood
 	   RadhaKirshna = new Hotel("RadhaKirshna");
 	   RadhaKirshna.setRegularWeekDay(150);
+	   RadhaKirshna.setRegularWeekEnd(120);
 	   
 				
 		//setting values for ridgewood   
 	   Ganesh = new Hotel("Ganesh");
 	   Ganesh.setRegularWeekDay(250);
+	   Ganesh.setRegularWeekEnd(200);
 	    
 		
 		 //int index = date.indexOf(":");
@@ -58,20 +61,22 @@ public class HotelReservationSystem {
     	
   //implementing the min method
     private static String min(int x, int y, int z) {
-	     if (x < y && x < z) {
-	    	 return Lotus.getHotelName();
-	     } else if (y < x && y < z) {
-	    	 return RadhaKirshna.getHotelName();
-	     } else if (z < x && z < y) {
-	    	 return Ganesh.getHotelName();
-	     } else if (x == y || y == z) {
-	    	 return Ganesh.getHotelName();
-	     } else if (z == x) {
-	    	 return RadhaKirshna.getHotelName();
-	     } else {
-	    	 return Lotus.getHotelName();
-	     } 
+    	if(x < y && x < z) {
+ 			return Lotus.getHotelName();
+ 		}else if(y<x && y < z) {
+ 			return RadhaKirshna.getHotelName();
+ 		}else if(x==y ) {
+ 			return (Lotus.getHotelName()+" "+RadhaKirshna.getHotelName());
+ 		}else if(y==z) {
+ 			return (RadhaKirshna.getHotelName()+" "+Ganesh.getHotelName());
+ 		}else if(x==z) {
+ 			return (Lotus.getHotelName()+" "+Ganesh.getHotelName());
+ 		}
+ 		else {
+ 			return Ganesh.getHotelName();
+ 		}
 	}
 }
+
 
 

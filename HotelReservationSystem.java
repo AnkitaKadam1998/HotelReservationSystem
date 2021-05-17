@@ -44,10 +44,9 @@ public class HotelReservationSystem {
 		     if (day_index_start != -1) {
 			     String day = date.substring(day_index_start + 1, day_index_end);
 				    
-					     cost_Lotus += Lotus.getRegularWeekDay();
-					     cost_RadhaKirshna += RadhaKirshna.getRegularWeekDay();
-					     cost_Ganesh += Ganesh.getRegularWeekDay();
-				     
+					     cost_Lotus += Lotus.getRegularWeekDay()+Lotus.getRegularWeekEnd();
+					     cost_RadhaKirshna += RadhaKirshna.getRegularWeekDay()+RadhaKirshna.getRegularWeekEnd();
+					     cost_Ganesh += Ganesh.getRegularWeekDay()+Ganesh.getRegularWeekEnd();				     
 			     }
 		     }  
 	    

@@ -16,18 +16,21 @@ public class HotelReservationSystem {
 		
 		//setting values for lakewood
 	    Lotus = new Hotel("Lotus");
+		 Lotus.setRating(4);	
 	    Lotus.setRegularWeekDay(100);
 	    Lotus.setRegularWeekEnd(90);
 	    
 		 		
 		//setting values for bridgewood
 	   RadhaKirshna = new Hotel("RadhaKirshna");
+		RadhaKirshna.setRating(5);
 	   RadhaKirshna.setRegularWeekDay(150);
 	   RadhaKirshna.setRegularWeekEnd(120);
 	   
 				
 		//setting values for ridgewood   
 	   Ganesh = new Hotel("Ganesh");
+		Ganesh.setRating(3);
 	   Ganesh.setRegularWeekDay(250);
 	   Ganesh.setRegularWeekEnd(200);
 	    
@@ -76,6 +79,7 @@ public class HotelReservationSystem {
  		}
 	}
 }
+
 
 
 
